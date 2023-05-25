@@ -1,5 +1,5 @@
 라즈베리파이 하드웨어 구성
-https://github.com/Mpicea/Posture-Correction-Chair/issues/2#issue-1725615278
+![KakaoTalk_20230525_182028086](https://github.com/Mpicea/Posture-Correction-Chair/assets/100979640/dab0780d-6d5c-4693-8ab1-f27ebe5ecd31)
 ---
 참고자료
 https://pinout.xyz/pinout/spi
