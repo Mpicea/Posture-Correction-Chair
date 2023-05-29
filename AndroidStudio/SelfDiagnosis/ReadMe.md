@@ -4,7 +4,7 @@
       - ui
         - selfdiagnosis
           - SelfDiagnosisFragment.java
-          - SelfDiagnosisViewModel.java *
+          - SelfDiagnosisViewModel.java*
   - res
     - drawable
       - ic_back.png
