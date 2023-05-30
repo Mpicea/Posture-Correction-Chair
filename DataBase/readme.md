@@ -1,4 +1,4 @@
-라즈베리파이에 설치
+라즈베리파이에 설치  
 프로그램 : DB Browser for SQLite
 
 ---
