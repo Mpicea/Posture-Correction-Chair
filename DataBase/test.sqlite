@@ -1,32 +1,32 @@
-//아마 예상되는 코드
+--아마 예상되는 코드
 
 CREATE TABLE `day`  
 (  
- `min` int NOT NULL ,  //5분 간격으로 행을 가짐, PK
- `1`   int NULL ,  //
- `2`   int NULL ,  
- `3`   int NULL ,  
- `4`   int NULL ,  
- `5`   int NULL ,  
- `6`   int NULL ,  
- `7`   int NULL ,  
- `8`   int NULL ,  
- `9`   int NULL ,  
- `10`  int NULL ,  
- `11`  int NULL ,  
- `12`  int NULL ,   
- `13`  int NULL ,  
- `14`  int NULL ,  
- `15`  int NULL ,  
- `16`  int NULL ,  
- `17`  int NULL ,  
- `18`  int NULL ,  
- `19`  int NULL ,  
- `20`  int NULL ,  
- `21`  int NULL ,  
- `22`  int NULL ,  
- `23`  int NULL ,  
- `24`  int NULL ,  
+ `min` int NOT NULL ,  --5분 간격으로 행을 가짐, PK
+ `1`   int NULL ,  --0~1시
+ `2`   int NULL ,  --1~2시
+ `3`   int NULL ,  --2~3시
+ `4`   int NULL ,  --3~4시
+ `5`   int NULL ,  --4~5시
+ `6`   int NULL ,  --5~6시
+ `7`   int NULL ,  --6~7시
+ `8`   int NULL ,  --7~8시
+ `9`   int NULL ,  --8~9시
+ `10`  int NULL ,  --9~10시
+ `11`  int NULL ,  --10~11시
+ `12`  int NULL ,  --11~12시
+ `13`  int NULL ,  --12~13시
+ `14`  int NULL ,  --13~14시
+ `15`  int NULL ,  --14~15시
+ `16`  int NULL ,  --15~16시
+ `17`  int NULL ,  --16~17시
+ `18`  int NULL ,  --17~18시
+ `19`  int NULL ,  --18~19시
+ `20`  int NULL ,  --19~20시
+ `21`  int NULL ,  --20~21시
+ `22`  int NULL ,  --21~22시
+ `23`  int NULL ,  --22~23시
+ `24`  int NULL ,  --23~24시
   
 PRIMARY KEY (`min`)  
 );  
@@ -35,11 +35,11 @@ PRIMARY KEY (`min`)
   
 CREATE TABLE `YYYYMM`  
 (  
- `day`       int NOT NULL ,  
- `total`     int NULL ,  
- `goodtime`  int NULL ,  
- `badtime`   int NULL ,  
- `goodscore` int NULL ,  
+ `day`       int NOT NULL ,  --월별 일수 PK 
+ `total`     int NULL ,  -- 총 앉은 시간
+ `goodtime`  int NULL ,  -- 잘 앉은 시간
+ `badtime`   int NULL ,  --잘 못 앉은 시간
+ `goodscore` int NULL ,  -- 잘 앉은 시간 점수 = 잘 앉은 시간 / 총 앉은 시간
   
 PRIMARY KEY (`day`)  
 );  
@@ -49,13 +49,13 @@ PRIMARY KEY (`day`)
   
 CREATE TABLE `YYYYMM`  
 (  
- `day`   int NOT NULL ,  
- `pain`  int NULL , 
- `drug`  int NULL , //약
- `neck`  int NULL ,  //목
- `shldr` int NULL ,  //어깨
- `back`  int NULL ,   //허리
- `wrist` int NULL , //손목
+ `day`   int NOT NULL ,  --월별 일수 PK
+ `pain`  int NULL ,  --고통 여부
+ `drug`  int NULL ,  --약
+ `neck`  int NULL ,  --목
+ `shldr` int NULL ,  --어깨
+ `back`  int NULL ,  --허리
+ `wrist` int NULL ,  --손목
   
 PRIMARY KEY (`day`)  
 );  
