@@ -1,0 +1,63 @@
+--아마 예상되는 코드
+--스키마 이름 : DayDB
+CREATE TABLE `day`  
+(  
+ `min` INTEGER NOT NULL ,  --5분 간격으로 행을 가짐, PK
+ `1`   INTEGER DEFAULT NULL ,  --0~1시
+ `2`   INTEGER DEFAULT NULL ,  --1~2시
+ `3`   INTEGER DEFAULT NULL ,  --2~3시
+ `4`   INTEGER DEFAULT NULL ,  --3~4시
+ `5`   INTEGER DEFAULT NULL ,  --4~5시
+ `6`   INTEGER DEFAULT NULL ,  --5~6시
+ `7`   INTEGER DEFAULT NULL ,  --6~7시
+ `8`   INTEGER DEFAULT NULL ,  --7~8시
+ `9`   INTEGER DEFAULT NULL ,  --8~9시
+ `10`  INTEGER DEFAULT NULL ,  --9~10시
+ `11`  INTEGER DEFAULT NULL ,  --10~11시
+ `12`  INTEGER DEFAULT NULL ,  --11~12시
+ `13`  INTEGER DEFAULT NULL ,  --12~13시
+ `14`  INTEGER DEFAULT NULL ,  --13~14시
+ `15`  INTEGER DEFAULT NULL ,  --14~15시
+ `16`  INTEGER DEFAULT NULL ,  --15~16시
+ `17`  INTEGER DEFAULT NULL ,  --16~17시
+ `18`  INTEGER DEFAULT NULL ,  --17~18시
+ `19`  INTEGER DEFAULT NULL ,  --18~19시
+ `20`  INTEGER DEFAULT NULL ,  --19~20시
+ `21`  INTEGER DEFAULT NULL ,  --20~21시
+ `22`  INTEGER DEFAULT NULL ,  --21~22시
+ `23`  INTEGER DEFAULT NULL ,  --22~23시
+ `24`  INTEGER DEFAULT NULL ,  --23~24시
+  
+PRIMARY KEY (`min`)  
+);  
+  
+--------------
+--스키마 이름 : MonDB
+
+CREATE TABLE `YYYYMM`  
+(  
+ `day`       INTEGER NOT NULL ,  --월별 일수 PK 
+ `total`     INTEGER DEFAULT NULL ,  -- 총 앉은 시간
+ `goodtime`  INTEGER DEFAULT NULL ,  -- 잘 앉은 시간
+ `badtime`   INTEGER DEFAULT NULL ,  --잘 못 앉은 시간
+ `goodscore` INTEGER DEFAULT NULL ,  -- 잘 앉은 시간 점수 = 잘 앉은 시간 / 총 앉은 시간
+  
+PRIMARY KEY (`day`)  
+);  
+  
+------------------------------------------  
+--스키마 이름 : SelfDB
+  
+CREATE TABLE `YYYYMM`  
+(  
+ `day`   INTEGER NOT NULL ,  --월별 일수 PK
+ `pain`  INTEGER DEFAULT NULL ,  --고통 여부
+ `drug`  INTEGER DEFAULT NULL ,  --약
+ `neck`  INTEGER DEFAULT NULL ,  --목
+ `shldr` INTEGER DEFAULT NULL ,  --어깨
+ `back`  INTEGER DEFAULT NULL ,  --허리
+ `wrist` INTEGER DEFAULT NULL ,  --손목
+  
+PRIMARY KEY (`day`)  
+);  
+
