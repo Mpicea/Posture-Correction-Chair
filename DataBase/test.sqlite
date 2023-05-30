@@ -56,7 +56,7 @@ CREATE TABLE `YYYYMM`
  `neck`  int NULL ,  
  `shldr` int NULL ,  
  `back`  int NULL ,  
- `hend`  int NULL ,  
+ `drug`  int NULL ,  
   
 PRIMARY KEY (`day`)  
 );  
