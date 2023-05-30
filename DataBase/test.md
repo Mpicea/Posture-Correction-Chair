@@ -1,0 +1,63 @@
+아마 예상되는 코드
+
+
+CREATE TABLE `day`  
+(  
+ `min` int NOT NULL ,  
+ `1`   int NULL ,  
+ `2`   int NULL ,  
+ `3`   int NULL ,  
+ `4`   int NULL ,  
+ `5`   int NULL ,  
+ `6`   int NULL ,  
+ `7`   int NULL ,  
+ `8`   int NULL ,  
+ `9`   int NULL ,  
+ `10`  int NULL ,  
+ `11`  int NULL ,  
+ `12`  int NULL ,   
+ `13`  int NULL ,  
+ `14`  int NULL ,  
+ `15`  int NULL ,  
+ `16`  int NULL ,  
+ `17`  int NULL ,  
+ `18`  int NULL ,  
+ `19`  int NULL ,  
+ `20`  int NULL ,  
+ `21`  int NULL ,  
+ `22`  int NULL ,  
+ `23`  int NULL ,  
+ `24`  int NULL ,  
+  
+PRIMARY KEY (`min`)  
+);  
+  
+---
+  
+CREATE TABLE `YYYYMM`  
+(  
+ `day`       int NOT NULL ,  
+ `total`     int NULL ,  
+ `goodtime`  int NULL ,  
+ `badtime`   int NULL ,  
+ `goodscore` int NULL ,  
+  
+PRIMARY KEY (`day`)  
+);  
+  
+------------------------------------------  
+  
+  
+CREATE TABLE `YYYYMM`  
+(  
+ `day`   int NOT NULL ,  
+ `pain`  int NULL ,  
+ `wrist` int NULL ,  
+ `neck`  int NULL ,  
+ `shldr` int NULL ,  
+ `back`  int NULL ,  
+ `hend`  int NULL ,  
+  
+PRIMARY KEY (`day`)  
+);  
+
