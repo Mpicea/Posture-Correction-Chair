@@ -51,12 +51,12 @@ PRIMARY KEY (`day`)
 CREATE TABLE `YYYYMM`  
 (  
  `day`   int NOT NULL ,  
- `pain`  int NULL ,  
- `wrist` int NULL ,  
- `neck`  int NULL ,  
- `shldr` int NULL ,  
- `back`  int NULL ,  
- `drug`  int NULL ,  
+ `pain`  int NULL , 
+ `drug`  int NULL , //약
+ `neck`  int NULL ,  //목
+ `shldr` int NULL ,  //어깨
+ `back`  int NULL ,   //허리
+ `wrist` int NULL , //손목
   
 PRIMARY KEY (`day`)  
 );  
