@@ -1,10 +1,9 @@
-아마 예상되는 코드
-
+//아마 예상되는 코드
 
 CREATE TABLE `day`  
 (  
- `min` int NOT NULL ,  
- `1`   int NULL ,  
+ `min` int NOT NULL ,  //5분 간격으로 행을 가짐, PK
+ `1`   int NULL ,  //
  `2`   int NULL ,  
  `3`   int NULL ,  
  `4`   int NULL ,  
@@ -32,7 +31,7 @@ CREATE TABLE `day`
 PRIMARY KEY (`min`)  
 );  
   
----
+--------------
   
 CREATE TABLE `YYYYMM`  
 (  
