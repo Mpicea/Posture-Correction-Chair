@@ -1,5 +1,5 @@
 --아마 예상되는 코드
-
+--스키마 이름 : DayDB
 CREATE TABLE `day`  
 (  
  `min` int NOT NULL ,  --5분 간격으로 행을 가짐, PK
@@ -32,7 +32,8 @@ PRIMARY KEY (`min`)
 );  
   
 --------------
-  
+--스키마 이름 : MonDB
+
 CREATE TABLE `YYYYMM`  
 (  
  `day`       int NOT NULL ,  --월별 일수 PK 
@@ -45,7 +46,7 @@ PRIMARY KEY (`day`)
 );  
   
 ------------------------------------------  
-  
+--스키마 이름 : SelfDB
   
 CREATE TABLE `YYYYMM`  
 (  
