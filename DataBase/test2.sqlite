@@ -1,32 +1,33 @@
 --아마 예상되는 코드
 --스키마 이름 : DayDB
+-- 0=NULL, 1=잘 앉은 시간, 2=잘 못 앉은 시간
 CREATE TABLE `day`  
 (  
  `min` INTEGER NOT NULL ,  --5분 간격으로 행을 가짐, PK
- `1`   INTEGER DEFAULT NULL ,  --0~1시
- `2`   INTEGER DEFAULT NULL ,  --1~2시
- `3`   INTEGER DEFAULT NULL ,  --2~3시
- `4`   INTEGER DEFAULT NULL ,  --3~4시
- `5`   INTEGER DEFAULT NULL ,  --4~5시
- `6`   INTEGER DEFAULT NULL ,  --5~6시
- `7`   INTEGER DEFAULT NULL ,  --6~7시
- `8`   INTEGER DEFAULT NULL ,  --7~8시
- `9`   INTEGER DEFAULT NULL ,  --8~9시
- `10`  INTEGER DEFAULT NULL ,  --9~10시
- `11`  INTEGER DEFAULT NULL ,  --10~11시
- `12`  INTEGER DEFAULT NULL ,  --11~12시
- `13`  INTEGER DEFAULT NULL ,  --12~13시
- `14`  INTEGER DEFAULT NULL ,  --13~14시
- `15`  INTEGER DEFAULT NULL ,  --14~15시
- `16`  INTEGER DEFAULT NULL ,  --15~16시
- `17`  INTEGER DEFAULT NULL ,  --16~17시
- `18`  INTEGER DEFAULT NULL ,  --17~18시
- `19`  INTEGER DEFAULT NULL ,  --18~19시
- `20`  INTEGER DEFAULT NULL ,  --19~20시
- `21`  INTEGER DEFAULT NULL ,  --20~21시
- `22`  INTEGER DEFAULT NULL ,  --21~22시
- `23`  INTEGER DEFAULT NULL ,  --22~23시
- `24`  INTEGER DEFAULT NULL ,  --23~24시
+ `1h`   INTEGER DEFAULT 0 ,  --0~1시
+ `2h`   INTEGER DEFAULT 0 ,  --1~2시
+ `3h`   INTEGER DEFAULT 0 ,  --2~3시
+ `4h`   INTEGER DEFAULT 0 ,  --3~4시
+ `5h`   INTEGER DEFAULT 0 ,  --4~5시
+ `6h`   INTEGER DEFAULT 0 ,  --5~6시
+ `7h`   INTEGER DEFAULT 0 ,  --6~7시
+ `8h`   INTEGER DEFAULT 0 ,  --7~8시
+ `9h`   INTEGER DEFAULT 0 ,  --8~9시
+ `10h`  INTEGER DEFAULT 0 ,  --9~10시
+ `11h`  INTEGER DEFAULT 0 ,  --10~11시
+ `12h`  INTEGER DEFAULT 0 ,  --11~12시
+ `13h`  INTEGER DEFAULT 0 ,  --12~13시
+ `14h`  INTEGER DEFAULT 0 ,  --13~14시
+ `15h`  INTEGER DEFAULT 0 ,  --14~15시
+ `16h`  INTEGER DEFAULT 0 ,  --15~16시
+ `17h`  INTEGER DEFAULT 0 ,  --16~17시
+ `18h`  INTEGER DEFAULT 0 ,  --17~18시
+ `19h`  INTEGER DEFAULT 0 ,  --18~19시
+ `20h`  INTEGER DEFAULT 0 ,  --19~20시
+ `21h`  INTEGER DEFAULT 0 ,  --20~21시
+ `22h`  INTEGER DEFAULT 0 ,  --21~22시
+ `23h`  INTEGER DEFAULT 0 ,  --22~23시
+ `24h`  INTEGER DEFAULT 0 ,  --23~24시
   
 PRIMARY KEY (`min`)  
 );  
@@ -37,10 +38,10 @@ PRIMARY KEY (`min`)
 CREATE TABLE `YYYYMM`  
 (  
  `day`       INTEGER NOT NULL ,  --월별 일수 PK 
- `total`     INTEGER DEFAULT NULL ,  -- 총 앉은 시간
- `goodtime`  INTEGER DEFAULT NULL ,  -- 잘 앉은 시간
- `badtime`   INTEGER DEFAULT NULL ,  --잘 못 앉은 시간
- `goodscore` INTEGER DEFAULT NULL ,  -- 잘 앉은 시간 점수 = 잘 앉은 시간 / 총 앉은 시간
+ `total`     INTEGER DEFAULT 0 ,  -- 총 앉은 시간
+ `goodtime`  INTEGER DEFAULT 0 ,  -- 잘 앉은 시간
+ `badtime`   INTEGER DEFAULT 0 ,  --잘 못 앉은 시간
+ `goodscore` INTEGER DEFAULT 0 ,  -- 잘 앉은 시간 점수 = 잘 앉은 시간 / 총 앉은 시간
   
 PRIMARY KEY (`day`)  
 );  
