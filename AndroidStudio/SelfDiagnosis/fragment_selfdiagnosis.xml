@@ -4,215 +4,182 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.selfdiagnosis.SelfDiagnosisFragment">
+    tools:context=".MainActivity">
 
-    <CalendarView
-        android:id="@+id/calendarView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        app:mcv_showOtherDates="all"
+        app:mcv_selectionColor="#00F"
+        tools:ignore="MissingConstraints" />
 
-    <ToggleButton
-        android:id="@+id/toggleButton"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="480dp"
-        android:background="@drawable/ic_pain"
-        android:text="@string/paintogglebtn"
-        android:textOff=""
-        android:textOn=""
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="DuplicateSpeakableTextCheck" />
-
-    <ToggleButton
-        android:id="@+id/toggleButton2"
-        android:layout_width="50dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="180dp"
-        android:layout_marginTop="480dp"
-        android:background="@drawable/ic_wrist"
-        android:text="ToggleButton"
-        android:textOff=""
-        android:textOn=""
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ToggleButton
-        android:id="@+id/toggleButton3"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="304dp"
-        android:layout_marginTop="480dp"
-        android:background="@drawable/ic_neck"
-        android:text="ToggleButton"
-        android:textOff=""
-        android:textOn=""
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ToggleButton
-        android:id="@+id/toggleButton4"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="580dp"
-        android:background="@drawable/ic_drug"
-        android:text="ToggleButton"
-        android:textOff=""
-        android:textOn=""
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ToggleButton
-        android:id="@+id/toggleButton5"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="580dp"
-        android:background="@drawable/ic_shldr"
-        android:text="ToggleButton"
-        android:textOff=""
-        android:textOn=""
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ToggleButton
-        android:id="@+id/toggleButton7"
-        android:layout_width="40dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="314dp"
-        android:layout_marginTop="580dp"
-        android:background="@drawable/ic_back"
-        android:text="ToggleButton"
-        android:textOff=""
-        android:textOn=""
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
+    <!--//////////////////////////////////////////////////////////////////////////////-->
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        style="@style/imgIc"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="365dp"
         android:src="@drawable/ic_pain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:id="@+id/imageView1"
+        style="@style/imgIc"
         android:layout_marginStart="90dp"
-        android:layout_marginTop="365dp"
         android:src="@drawable/ic_wrist"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:id="@+id/imageView2"
+        style="@style/imgIc"
         android:layout_marginStart="155dp"
-        android:layout_marginTop="365dp"
         android:src="@drawable/ic_neck"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="365dp"
+        android:id="@+id/imageView3"
+        style="@style/imgIc"
         android:layout_marginEnd="160dp"
         android:src="@drawable/ic_shldr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="365dp"
+        android:id="@+id/imageView4"
+        style="@style/imgIc"
         android:layout_marginEnd="95dp"
         android:src="@drawable/ic_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="365dp"
+        android:id="@+id/imageView5"
+        style="@style/imgIc"
         android:layout_marginEnd="30dp"
         android:src="@drawable/ic_drug"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--//////////////////////////////////////////////////////////////////////////////-->
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/txtStat"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="400dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/txtStat"
+        android:layout_marginStart="80dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="400dp"
+        style="@style/txtStat"
+        android:layout_marginStart="145dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="400dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
+        style="@style/txtStat"
         android:layout_marginEnd="145dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
+        android:id="@+id/textView4"
+        style="@style/txtStat"
         android:layout_marginEnd="80dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
+        android:id="@+id/textView5"
+        style="@style/txtStat"
         android:layout_marginEnd="15dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!--//////////////////////////////////////////////////////////////////////////////-->
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        style="@style/toggleSt"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="480dp"
+        android:foreground="@drawable/ic_pain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton1"
+        style="@style/toggleSt"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="480dp"
+        android:foreground="@drawable/ic_wrist"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        style="@style/toggleSt"
+        android:layout_marginStart="304dp"
+        android:layout_marginTop="480dp"
+        android:foreground="@drawable/ic_neck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton3"
+        style="@style/toggleSt"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="560dp"
+        android:foreground="@drawable/ic_drug"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton4"
+        style="@style/toggleSt"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="560dp"
+        android:foreground="@drawable/ic_shldr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton5"
+        style="@style/toggleSt"
+        android:layout_marginStart="304dp"
+        android:layout_marginTop="560dp"
+        android:foreground="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="644dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
