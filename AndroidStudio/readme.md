@@ -1,6 +1,7 @@
 폴더
 - Month : Mpicea(장지현)의 작업폴더    
 - SelfDiagnosis : Song-haJo(조송하)의 작업 폴더
+- Day&connect : zyayou(조은경)의 작업 폴더
   
 다들 디렉터리 추가해서 정리해 올릴 것
 
