@@ -127,6 +127,27 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void createCSVFile() {
+        // Get the application package name
+        String packageName = getPackageName();
+    
+        // Get the file directory path
+        File fileDir = getFilesDir();
+    
+        // Create the CSV file path
+        String csvFilePath = fileDir.getAbsolutePath() + "/" + "SelfDiagnosis.csv";
+    
+        // Create the CSV file
+        try {
+            File csvFile = new File(csvFilePath);
+            csvFile.createNewFile();
+            // Perform any necessary operations on the file, such as writing data to it
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Handle any errors that occur during file creation
+        }
+    }
+    
     // Read the csv file and add the values into 2D string array.
     private String[][] readCSV() {
         // Get the absolute path of the file
