@@ -103,10 +103,10 @@ public class MainActivity extends AppCompatActivity {
                 selectedDate = Year + "," + Month + "," + Day;
 
                 nthLine = isIn(csvData, 0, selectedDate);
-
-                // if the date is not in the data, add it to the data and update nthLine.
+                // if the date is not in the data (nthLine == -1), add it to the data and update nthLine.
                 if (nthLine < 0) {
                     csvData = Add(csvData, selectedDate);
+                    updateCSV(csvData);
                     nthLine = isIn(csvData, 0, selectedDate);
                 }
                 showToggle(nthLine);
@@ -121,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
                 new ApiSimulator(dateList).executeOnExecutor(Executors.newSingleThreadExecutor());
 
                 monitorToggle(csvData, dateList, selectedDate);
+                updateCSV(csvData);
                 showCSV();
             }
         });
