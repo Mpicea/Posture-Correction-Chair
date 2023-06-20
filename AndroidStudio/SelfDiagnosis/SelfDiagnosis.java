@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
                 new ApiSimulator(dateList).executeOnExecutor(Executors.newSingleThreadExecutor());
 
                 monitorToggle(csvData, dateList, selectedDate);
-                countOnesByMonth(Month, csvData);
+                countOnesByMonth(Month, Year, csvData);
                 updateCSV(csvData);
                 showCSV();
             }
@@ -395,19 +395,21 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void countOnesByMonth(int month, String[][] csvData) {
+    private void countOnesByMonth(int month, int year, String[][] csvData) {
         int sumOfOnes;
         int eachMonth = 0;
+        int eachYear = 0;
         for (int ith = 1; ith <= 6; ith++) {
             sumOfOnes = 0;
             // Iterate over the csvData array
             for (int d = 0; d < csvData.length; d++) {
+                eachYear = Integer.parseInt(csvData[d][0].split(",")[0]);
                 eachMonth = Integer.parseInt(csvData[d][0].split(",")[1]);
                 // Get the value for the corresponding month (csvData[i][month])
                 String value = csvData[d][ith];
 
                 // Check if the value is "1" and increment the sum if true
-                if ("1".equals(value) && month == eachMonth) {
+                if ("1".equals(value) && month == eachMonth && year == eachYear) {
                     sumOfOnes++;
                 }
             }
