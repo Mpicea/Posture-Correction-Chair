@@ -121,33 +121,13 @@ public class MainActivity extends AppCompatActivity {
                 new ApiSimulator(dateList).executeOnExecutor(Executors.newSingleThreadExecutor());
 
                 monitorToggle(csvData, dateList, selectedDate);
+                countOnesByMonth(Month, csvData);
                 updateCSV(csvData);
                 showCSV();
             }
         });
     }
 
-    private void createCSVFile() {
-        // Get the application package name
-        String packageName = getPackageName();
-    
-        // Get the file directory path
-        File fileDir = getFilesDir();
-    
-        // Create the CSV file path
-        String csvFilePath = fileDir.getAbsolutePath() + "/" + "SelfDiagnosis.csv";
-    
-        // Create the CSV file
-        try {
-            File csvFile = new File(csvFilePath);
-            csvFile.createNewFile();
-            // Perform any necessary operations on the file, such as writing data to it
-        } catch (IOException e) {
-            e.printStackTrace();
-            // Handle any errors that occur during file creation
-        }
-    }
-    
     // Read the csv file and add the values into 2D string array.
     private String[][] readCSV() {
         // Get the absolute path of the file
@@ -399,7 +379,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        showStats(dList, selDate);
+        //showStats(dList, selDate);
     }
     public void showToggle(int dateIndex) {
         if (dateIndex < 0) {
@@ -415,19 +395,26 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void showStats(String[] dateList, String selectedDate) {
-        // Show the status of the toggle buttons according to the csv data.
-        for (int sIndex = 0; sIndex < dateList.length; sIndex++) {
-            if (csvData[sIndex][0].equals(selectedDate)) {
-                printText(csvData[sIndex][1], 1);
-                printText(csvData[sIndex][2], 2);
-                printText(csvData[sIndex][3], 3);
-                printText(csvData[sIndex][4], 4);
-                printText(csvData[sIndex][5], 5);
-                printText(csvData[sIndex][6], 6);
+    private void countOnesByMonth(int month, String[][] csvData) {
+        int sumOfOnes;
+        int eachMonth = 0;
+        for (int ith = 1; ith <= 6; ith++) {
+            sumOfOnes = 0;
+            // Iterate over the csvData array
+            for (int d = 0; d < csvData.length; d++) {
+                eachMonth = Integer.parseInt(csvData[d][0].split(",")[1]);
+                // Get the value for the corresponding month (csvData[i][month])
+                String value = csvData[d][ith];
+
+                // Check if the value is "1" and increment the sum if true
+                if ("1".equals(value) && month == eachMonth) {
+                    sumOfOnes++;
+                }
             }
+            printText(Integer.toString(sumOfOnes), ith);
         }
     }
+
 
     private class ApiSimulator extends AsyncTask<Void, Void, List<CalendarDay>> {
         String[] Time_Result;
